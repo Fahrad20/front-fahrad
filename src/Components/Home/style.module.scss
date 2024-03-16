@@ -1,0 +1,175 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 0;
+  margin-block: 3rem;
+
+  .item {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transform: scale(1.005);
+    }
+
+    img {
+      width: 100%;
+      height: 230px;
+    }
+
+    .tags {
+      display: block;
+      margin-block: 16px;
+      color: #eb0028;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .dateLine {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-block: 16px;
+
+      b {
+        font-size: 0.75rem;
+      }
+
+      span {
+        color: #9b9b9b;
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+    }
+
+    p {
+      color: #929292;
+      font-weight: 400;
+      font-size: 0.85rem;
+      line-height: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .item {
+      width: 48%;
+    }
+  }
+
+  @media (max-width: 675px) {
+    .item {
+      width: 100%;
+    }
+  }
+}
+
+.modalContainer {
+  width: 100vw;
+  height: 100svh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 999;
+
+  .modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 20px;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-family: cursive;
+    color: #000;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .itemBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    img {
+      height: 460px;
+    }
+
+    p {
+      width: 50%;
+      text-align: center;
+      color: #929292;
+    }
+
+    .tags {
+      display: block;
+      color: #eb0028;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .dateLine {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      b {
+        font-size: 0.75rem;
+      }
+
+      span {
+        color: #9b9b9b;
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  @media (max-width: 675px) {
+    .itemBlock {
+      img {
+        width: 95%;
+        height: 300px;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .close {
+      top: 5px;
+      right: 8px;
+      font-size: 18px;
+    }
+  }
+}
